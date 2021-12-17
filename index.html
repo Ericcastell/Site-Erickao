@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- arquivo css com os estilos da página e da barra de navegação -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"> <!-- incluir webfont da fonte Roboto -->
+    <link href="//datatables.net/download/build/nightly/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="//datatables.net/download/build/nightly/jquery.dataTables.js"></script>
+    <title>MM Center</title>
+</head>
+<body background="img/jbl wallpaper.png" bgproperties="fixed">
+    <script src="scripts/navbar.js"></script> <!-- script que irá ter as funções javascript da barra de navegação -->
+    <div class="navegacao-fundo-auxiliar" id="auxiliar-menu"></div><!-- elemento auxiliar para ficar de fundo quando o nav estiver aberto em mobile e telas de tamanho médio-->
+    <nav>
+        <h2>MM Center</h2>
+        <ul>
+            <li class="ativo"><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre mim</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <span class="separador"></span>
+        <h3>Redes sociais</h3>
+        <ul>
+            <li><a href="#">Github</a></li>
+            <li><a href="https://www.instagram.com/erckk._/">Instagram</a></li>
+        </ul>
+    </nav>
+    <div id="menu-btn" class="btn-toggle-menu"><img src="img/Botão Menu.png" width="35" height="35"><!-- botao para abrir e fechar o menu-->
+    </div>
+    <main>
+        <header>
+            <div id="title">
+                <h1>My Music Center</h1>
+            </div>
+        </header>
+        <script>
+        document.onreadystatechange = function(){
+        var toggleMenu = function(){//função para abrir e fechar o menu
+            var body = document.getElementsByTagName('body')[0];
+            var listaDeClasses = body.classList;//obterlista de clases
+            listaDeClasses.toggle('navAberto');//se tiver a classe navAberto tirar, caso contrario adicionar
+        };
+            document.getElementById('menu-btn').onclick = toggleMenu;//botao menu
+            document.getElementById('auxiliar-menu').onclick = toggleMenu;//elemento auxiliar para fechar quando o usuario clickar fora da nav (mobile e telas de tamanho médio)
+        }
+        </script>
+        <div id="card" class="card">
+            <div class="card-body">
+                <div id="tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="anim:position">Pos</th>
+                            <th class="anim:id">Music Name</th>
+                            <th class="anim:update">Author</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1</td>
+                            <td>Happy</td>
+                            <td>Pharrel Williams</td>
+                        </tr>
+                        <tr>
+                            <td>#2</td>
+                            <td>5ª Sinfonia em Dó Menor</td>
+                            <td>Ludwig Van Beethoven</td>
+                        </tr>
+                        <tr>
+                            <td>#3</td>
+                            <td>Aula de Matemática</td>
+                            <td>Tom Jobim</td>
+                        </tr>
+                        <tr>
+                            <td>#4</td>
+                            <td>Sempre Seu Homem</td>
+                            <td>Gusttavo Lima</td>
+                        </tr>
+                        <tr>
+                            <td>#5</td>
+                            <td>Esse cara sou eu</td>
+                            <td>Roberto Carlos</td>
+                        </tr>
+                        <tr>
+                            <td>#6</td>
+                            <td>たぶん</td>
+                            <td>YOASOBI</td>
+                        </tr>
+                        <tr>
+                            <td>#7</td>
+                            <td>That's What I Want</td>
+                            <td>Lil Nas X</td>
+                        </tr>
+                        <tr>
+                            <td>#8</td>
+                            <td>In This Shirt</td>
+                            <td>The Irrepressibles</td>
+                        </tr>
+                        <tr>
+                            <td>#9</td>
+                            <td>GANGNAM STYLE(강남스타일)</td>
+                            <td>PSY</td>
+                        </tr>
+                        <tr>
+                            <td>#10</td>
+                            <td>La La La (Brazil 2014)</td>
+                            <td>Shakira ft. Carlinhos Brown</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+        <div id="center">
+            <div id="happy_pic">
+                <div id="happy_title">#1 - Happy</div>
+                <br>
+                <br>
+                <iframe width="350" height="250" allowfullscreen="" style="border: 5px solid #008AE6; -moz-border-radius: 10px; -webkit-border-radius: 10px;"
+                src="https://www.youtube.com/embed/E5F0i1Ay3nE">
+                </iframe>
+            </div>   
+            <div id="beethoven_pic">
+                <div id="beethoven_title">#2 - 5ª Sinfonia em Dó Menor</div>
+                <br>
+                <br>
+                <iframe width="350" height="250" allowfullscreen="" style="border: 5px solid #008AE6; -moz-border-radius: 10px; -webkit-border-radius: 10px;"
+                src="https://www.youtube.com/embed/DH4sddcTmR0">
+                </iframe>
+            </div>
+        </div>
+        <div id="center">
+            <div id="math_pic">
+                <div id="math_title">#3 - Aula de Matemática</div>
+                <br>
+                <br>
+                <iframe width="350" height="250" allowfullscreen="" style="border: 5px solid #008AE6; -moz-border-radius: 10px; -webkit-border-radius: 10px;"
+                src="https://www.youtube.com/embed/LRyBtzAYVXo">
+                </iframe>
+            </div>   
+            <div id="yman_pic">
+                <div id="yman_title">#4 - Sempre Seu Homem</div>
+                <br>
+                <br>
+                <iframe width="350" height="250" allowfullscreen="" style="border: 5px solid #008AE6; -moz-border-radius: 10px; -webkit-border-radius: 10px;"
+                src="https://www.youtube.com/embed/ZKR9w5qJoR4">
+                </iframe>
+            </div>
+        </div>
+        <div id="center">
+            <div id="rc_pic">
+                <div id="rc_title">#5 - Esse Cara Sou Eu</div>
+                <br>
+                <br>
+                <iframe width="350" height="250" allowfullscreen="" style="border: 5px solid #008AE6; -moz-border-radius: 10px; -webkit-border-radius: 10px;"
+                src="https://www.youtube.com/embed/Hapoa_cDdRs">
+                </iframe>
+            </div>   
+            <div id="yoasobi_pic">
+                <div id="yoasobi_title">#6 - たぶん</div>
+                <br>
+                <br>
+                <iframe width="350" height="250" allowfullscreen="" style="border: 5px solid #008AE6; -moz-border-radius: 10px; -webkit-border-radius: 10px;"
+                src="https://www.youtube.com/embed/E5h3CFUOqKs">
+                </iframe>
+            </div>
+        </div>
+        <div id="center">
+            <div id="lilnas_pic">
+                <div id="lilnas_title">#7 - That's What I Want</div>
+                <br>
+                <br>
+                <iframe width="350" height="250" allowfullscreen="" style="border: 5px solid #008AE6; -moz-border-radius: 10px; -webkit-border-radius: 10px;"
+                src="https://www.youtube.com/embed/T0y9WptsdF8">
+                </iframe>
+            </div>   
+            <div id="its_pic">
+                <div id="its_title">#8 - In This Shirt</div>
+                <br>
+                <br>
+                <iframe width="350" height="250" allowfullscreen="" style="border: 5px solid #008AE6; -moz-border-radius: 10px; -webkit-border-radius: 10px;"
+                src="https://www.youtube.com/embed/q53hgMXaNKg">
+                </iframe>
+            </div>
+        </div>
+        <div id="center">
+            <div id="gs_pic">
+                <div id="gs_title">#9 - GANGNAM STYLE(강남스타일)	</div>
+                <br>
+                <br>
+                <iframe width="350" height="250" allowfullscreen="" style="border: 5px solid #008AE6; -moz-border-radius: 10px; -webkit-border-radius: 10px;"
+                src="https://www.youtube.com/embed/NeLnqJGhq_Q">
+                </iframe>
+            </div>   
+            <div id="lalala_pic">
+                <div id="lalala_title">#10 - La La La (Brazil 2014)</div>
+                <br>
+                <br>
+                <iframe width="350" height="250" allowfullscreen="" style="border: 5px solid #008AE6; -moz-border-radius: 10px; -webkit-border-radius: 10px;"
+                src="https://www.youtube.com/embed/GhCdgOfCyI8">
+                </iframe>
+            </div>
+        </div>
+
+</main>
+</body>
+</html>
